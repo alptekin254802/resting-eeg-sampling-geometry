@@ -1,0 +1,13 @@
+{
+  "files": {
+    "artifact_sensitivity/run_artifact.py": "cf46c8ac1e926aa51eaaf028bc833c834f6e49bcce29591505eea2ea0392dcb2",
+    "artifact_sensitivity/test_artifact.py": "aadfa3a7485d241370b305042466b386c04cd3323a8884f8a744e424e38d9c37",
+    "artifact_sensitivity/verify_saved.py": "e7ce3e8f8446769ea0ef18d43abd71c4a8d5f7c5a7819295ea70210e38447fa0",
+    "scripts/sampling_design.py": "14d9906208fe7c86be504e1d23c3eee75e37fd1747ee96925d525251c1b6b209",
+    "scripts/preregistered_analysis.py": "cb28c25f4f24d75090563605f28e5702a2a51b06988229da0cd6a6f6ee087bc1",
+    "scripts/reproduce_inputs.py": "f5a5fc474d3165747677328f585045f9b0edf0e13855a88e9677714d4222609c",
+    "scripts/run_preregistered_analysis.py": "12b87e2a774bcd951d23a1c79a01adbe169c049073b84ed2091070b2770e7231",
+    "scripts/exploratory_sampling.py": "50ab3cfa8614e6ebed038ec70de875449375896fe679ed285a45cd40e5892de0"
+  },
+  "note": "Checksums of the portable scripts. Historical script checksums remain in the sanitized run records."
+}

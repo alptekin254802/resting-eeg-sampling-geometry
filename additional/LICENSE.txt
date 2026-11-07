@@ -1,0 +1,12 @@
+License scope
+
+Copyright (c) 2026 Alptekin Cinbat, Ümit Şentürk, and İbrahim Yücedağ.
+
+Python software and tests: MIT License (LICENSE-CODE.txt).
+Original documentation, figures, tables, and derived research outputs: Creative
+Commons Attribution 4.0 International (LICENSE-CONTENT.txt).
+The original OpenNeuro datasets retain their source CC0 terms. No raw EEG is
+distributed here. Source-derived factual metadata retain the source terms;
+the content license does not assert additional rights over those facts.
+
+CC BY 4.0 legal text: https://creativecommons.org/licenses/by/4.0/legalcode.txt

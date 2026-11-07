@@ -1,0 +1,100 @@
+{
+  "completed_utc": "2026-10-31T23:10:23.749059+00:00",
+  "original_pre_n": 531,
+  "structurally_eligible_post_n": 527,
+  "included_post_n": 524,
+  "excluded_metadata": [
+    {
+      "participant_id": "sub-149",
+      "path": "sub-149/ses-1/eeg/sub-149_ses-1_task-EyesClosed_acq-post_eeg.edf",
+      "expected_bytes": 23416896,
+      "expected_sha256": "7633aa5c36399e9a53cb1b63a2ee9cf2ec0b70291defc6d87ac9b2f8932472d2",
+      "structurally_eligible": false,
+      "reason": "duration <180s metadata",
+      "event_count": 1,
+      "boundary_onsets": "1",
+      "metadata_duration": 179
+    },
+    {
+      "participant_id": "sub-170",
+      "path": "sub-170/ses-1/eeg/sub-170_ses-1_task-EyesClosed_acq-post_eeg.edf",
+      "expected_bytes": 23936896,
+      "expected_sha256": "f37539ff8ac89db9b91b4758b228b71da802d13eed3c3a5cabfc259860dbe6fd",
+      "structurally_eligible": false,
+      "reason": "event class not ONLY-INITIAL-BOUNDARY",
+      "event_count": 43,
+      "boundary_onsets": "1;109419;109620;109810;110010;110201;110401;110602;110792;110993;111183;111383;111584;111774;111975;112165;112365;112556;112756;112957;113147;113347;113538;113738;113929;114129;114329;114520;114720;114911;115111;115301;115502;115702;115893;116093;116283;116484;116674;116875;117075;117266;117466",
+      "metadata_duration": 184
+    },
+    {
+      "participant_id": "sub-317",
+      "path": "sub-317/ses-1/eeg/sub-317_ses-1_task-EyesClosed_acq-post_eeg.edf",
+      "expected_bytes": 23806896,
+      "expected_sha256": "4f21c0f7b24fff770e4a20c173621c0e1cf0120c0efdc9e93180a00efeb8765d",
+      "structurally_eligible": false,
+      "reason": "event class not ONLY-INITIAL-BOUNDARY",
+      "event_count": 24,
+      "boundary_onsets": "1;37123;37323;37514;37714;37904;38105;38295;38496;38696;38886;39087;39277;39478;39668;39869;40119;40320;40510;40710;40901;41101;41302;41492",
+      "metadata_duration": 183
+    },
+    {
+      "participant_id": "sub-535",
+      "path": "sub-535/ses-1/eeg/sub-535_ses-1_task-EyesClosed_acq-post_eeg.edf",
+      "expected_bytes": 23676896,
+      "expected_sha256": "c45a76645a171b092bc02bb1b74ad4363975f60795336aa8ae3fcf846ce6fa49",
+      "structurally_eligible": false,
+      "reason": "event class not ONLY-INITIAL-BOUNDARY",
+      "event_count": 21,
+      "boundary_onsets": "1;121351;121441;121631;121832;122022;122222;122423;122613;122814;123004;123204;123395;123595;123796;123986;124186;124377;124577;124768;124968",
+      "metadata_duration": 182
+    }
+  ],
+  "excluded_qc": [
+    {
+      "participant_id": "sub-011",
+      "status": "EXCLUDED",
+      "reason": "F5: selected F5 A has no disjoint B",
+      "eligible_cells": 39,
+      "fs_hz": 1000.0,
+      "post_boundary_flag": false,
+      "pre_boundary_flag": false,
+      "actual_duration_s": 184.0,
+      "raw_sha256": "6e0e3d3cf8cc3d2c092e1cb3b8ca49a57a6850edc7708e28e11167c36fc95bd6",
+      "mask": "111111111111111111111111111111110110111101",
+      "C_feasible": true,
+      "F5_feasible": false,
+      "F10_feasible": true
+    },
+    {
+      "participant_id": "sub-481",
+      "status": "EXCLUDED",
+      "reason": "C: empty candidates",
+      "eligible_cells": 40,
+      "fs_hz": 1000.0,
+      "post_boundary_flag": false,
+      "pre_boundary_flag": false,
+      "actual_duration_s": 249.0,
+      "raw_sha256": "aadb4f00a18f84b1f2e4756ecf82385800ef0b1052777ec049f604db4589ce55",
+      "mask": "111111111111111111111111111101111111101111",
+      "C_feasible": false,
+      "F5_feasible": true,
+      "F10_feasible": true
+    },
+    {
+      "participant_id": "sub-598",
+      "status": "EXCLUDED",
+      "reason": "C: empty candidates",
+      "eligible_cells": 37,
+      "fs_hz": 1000.0,
+      "post_boundary_flag": false,
+      "pre_boundary_flag": false,
+      "actual_duration_s": 185.0,
+      "raw_sha256": "01fde9766b262e8348c4c8872c5457bc82f3921b870291eebd6b185c731b3675",
+      "mask": "111111111111111111111111111100011100111111",
+      "C_feasible": false,
+      "F5_feasible": true,
+      "F10_feasible": true
+    }
+  ],
+  "all_included_raw_sha256_verified": true
+}

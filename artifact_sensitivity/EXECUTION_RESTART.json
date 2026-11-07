@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-11-06T20:02:52.251799+00:00",
+  "reason": "Serial first-stage feasibility was slow because original F5 rejection loops run up to 100000 attempts per draw. Restart with six independent participant processes; ordered map preserves cohort order.",
+  "analysis_plan_changed": false,
+  "metric_threshold_seed_cohort_inference_changed": false,
+  "relative_alpha_or_rank_outcomes_seen": false,
+  "first_attempt_run_record": "RUN_RECORD_attempt1.json",
+  "plan_files_unchanged": true,
+  "first_attempt_source_included": false,
+  "first_attempt_source_sha256": "34c15b21ae1b7c7d6afff9069f5068840cf1becd089f2308da3cb8d66036c471",
+  "sanitized": true
+}

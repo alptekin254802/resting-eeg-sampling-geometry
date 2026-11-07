@@ -1,0 +1,48 @@
+{
+  "title": "Duration-by-geometry analysis plan",
+  "status": "Exploratory. The local timestamp and SHA-256 values in PLAN_RECORD.json are an audit record. No multiplicity correction is applied.",
+  "provenance_note": "A related 40-s comparison against an all-cell post-battery reference, using the original A/B schedules, was calculated during an independent audit before this plan. This analysis uses new single-sample draws, fixes all durations, designs and contrasts in advance, and reports every result.",
+  "question": "How accurately does one pre-battery sample rank participants by their level in a separate post-battery recording of the same person, and how does this change with sample duration (20, 40 and 80 s) and temporal placement (contiguous or distributed)? How large is the gain from distributed placement compared with the gain from a longer sample?",
+  "data": "No new raw EEG processing. Pre-battery cells: results/exploratory_2026-09-20/cell_band_powers.npz, array cell_band_powers (516, 42, 2) with posterior-ROI 8-13 Hz and 1-30 Hz band power per 4-s cell; all 42 cells are eligible for these 516 participants. Post-battery cells: additional/results/post_prepared.npz, arrays power (524, 42, 2) and mask (524, 42). Paths are relative to the software archive edition 2026-11-06.1.",
+  "compatibility_checks": "Before any outcome: (1) confirm both files use the same band-power function (ROI mean of three posterior density periodograms, trapezoidal 8-13 and 1-30 Hz, endpoints included) and the same unit (V^2); (2) reproduce post_prepared.npz markers from power and schedule as sum of alpha over sum of total, maximum absolute difference <= 1e-12; (3) reproduce the stored complete-support C and F10 markers from the pre-battery cell powers and schedule the same way, <= 1e-12; (4) confirm finite powers with 0 < alpha < total on all used cells; (5) confirm the pre-battery participant list equals the stored complete-support list. Any failure stops the analysis.",
+  "cohort": "Intersection of participant identifiers in the two files, aligned by identifier and ordered by sorted identifier. Expected N = 509. A different N stops the analysis before outcomes.",
+  "reference": "For each participant, one post-battery relative alpha: sum of alpha power over all eligible post cells (mask true) divided by sum of 1-30 Hz power over the same cells. The reference is the same for every design.",
+  "sample": "One pre-battery sample per participant per draw; there is no A/B pair. Sample value: sum of alpha power over the selected cells divided by sum of 1-30 Hz power over the same cells.",
+  "durations": "n = 5, 10 and 20 cells of 4 s (20, 40 and 80 s).",
+  "designs": {
+    "contiguous_5": "Contiguous, n = 5 (20 s).",
+    "contiguous_10": "Contiguous, n = 10 (40 s).",
+    "contiguous_20": "Contiguous, n = 20 (80 s).",
+    "distributed_5": "Distributed, n = 5 (20 s).",
+    "distributed_10": "Distributed, n = 10 (40 s).",
+    "distributed_20": "Distributed, n = 20 (80 s)."
+  },
+  "contiguous_rule": "One block of n consecutive cells. Start s is drawn uniformly from 0..(42 - n), i.e. 42 - n + 1 options; cells s..s+n-1.",
+  "distributed_rule": "Split cells 0..41 into n consecutive sections with the existing split_strata rule: q, r = divmod(42, n); the first r sections have q + 1 cells and the rest have q cells. Choose one cell uniformly from each section.",
+  "draws": "200 independent draws per participant and design, indexed 0..199.",
+  "draw_seed": "seed = unsigned big-endian integer of the first eight bytes of SHA-256 of the UTF-8 string 'duration-geometry-2026-11-07|<participant>|<design>|<draw>', where <participant> is the dataset identifier (for example sub-001), <design> is one of the six design labels above and <draw> is the decimal draw index. Generator: numpy.random.default_rng(seed) (PCG64). Contiguous: one call int(rng.integers(0, 42 - n + 1)) gives the start. Distributed: for each section in order, one call int(rng.integers(0, section_size)) gives the position within that section.",
+  "outcome": "For each design and draw, Spearman correlation across participants between the sample values and the reference, using average ranks for ties. Fisher transform z = arctanh(rho) without clipping. For each design: mean z over the 200 draws, rho_tilde = tanh(mean z), and the mean of the raw draw correlations.",
+  "contrasts": {
+    "a_placement": [
+      "distributed_5 - contiguous_5",
+      "distributed_10 - contiguous_10",
+      "distributed_20 - contiguous_20"
+    ],
+    "b_duration": [
+      "contiguous_10 - contiguous_5",
+      "contiguous_20 - contiguous_10",
+      "distributed_10 - distributed_5",
+      "distributed_20 - distributed_10"
+    ],
+    "c_placement_versus_duration": [
+      "distributed_5 - contiguous_10",
+      "distributed_10 - contiguous_20"
+    ],
+    "scale": "Delta z = mean z of the first design minus mean z of the second design. The raw difference is the mean raw correlation of the first design minus that of the second design. Both are reported for every contrast."
+  },
+  "inference": "5000 participant bootstrap resamples, generated by generate_bootstrap_indices(509, 'duration_geometry_bootstrap'), i.e. seed string 'OSF-nh4d8|participant_bootstrap|duration_geometry_bootstrap' with the same first-eight-byte SHA-256 rule and PCG64; one (5000, 509) int64 matrix in cohort order. All designs, draws, the reference and all contrasts share these resamples. In every resample the Spearman ranks are recomputed for samples and reference; duplicated participants receive average ranks. For each resample: mean z per design, contrasts as differences of mean z, and mean raw correlation per design. 95% intervals: 2.5th and 97.5th percentiles, NumPy method 'linear'. rho_tilde intervals are tanh of the mean-z percentiles. Intervals are also reported for mean raw correlations and raw differences. No multiplicity correction is applied, and this is stated in every report. The SHA-256 of the index matrix (little-endian int64, C order) is recorded.",
+  "mcse": "Monte Carlo standard error over the 200 draws, reported separately from the bootstrap interval. Design: sample SD (ddof = 1) of the 200 draw-level z values divided by sqrt(200). Contrast: the two designs use independent seed streams, so MCSE = sqrt(MCSE_1^2 + MCSE_2^2).",
+  "failure_rules": "A nonfinite power, a selected cell outside 0..41, a nonfinite or undefined correlation, or |rho| >= 1 (infinite Fisher transform) stops the analysis. No clipping, dropping, replacement or redraw.",
+  "interpretation": "Report every design and every contrast with its estimate and interval. No equivalence claim: overlap of two design intervals is not used to say that two designs are equal; only the paired difference and its interval are reported. The outcome is agreement with a measurement from a separate recording, not a biological true level. It also contains any change in state after the cognitive battery.",
+  "outputs": "followup_duration_2026-11/: plan files and PLAN_RECORD.json; code and short tests; a verifier for saved results; results_summary.json at full precision; result arrays (npz); table_duration_geometry.tex (no long dash, empty cells as --); figure_duration_geometry.pdf/png/svg with duration on the x axis, contiguous and distributed series, rho_tilde and 95% intervals on the y axis; SONUC_NOTU.txt. Earlier results, plans and the manuscript are not changed."
+}

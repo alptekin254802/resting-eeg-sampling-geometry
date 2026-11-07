@@ -1,0 +1,16 @@
+{
+  "report_written_at_utc": "2026-11-07T01:55:23.493679+00:00",
+  "plan_record_sha256": "d2adbab8d8f045b21248fb7c4959695a7dadd997a24ff4c2820cea5749c01fd2",
+  "validation_sha256": "ea073cca0daf5b8c5815be20c6f1066dbf7eb9c4d1b1a34e0e5a0c3e5d3b8f30",
+  "files_sha256": {
+    "pre_channel_band_powers.npz": "2e8f0808585bde0d780728a5985de0c1ca5b4e8d780bd671c266666c0c916e9d",
+    "post_channel_band_powers.npz": "f2ac967b0176734db7c063fe64cf12b168d75c82ba0096073abb9a72c1c7d1da",
+    "topography_inference.npz": "499e4d2a3676686fe9289201d3941944470e5ca9b2fcc04f3abd3e1a45e58f23"
+  },
+  "software": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "platform": "Linux-6.18.44-fc-v300-x86_64-with-glibc2.39"
+}

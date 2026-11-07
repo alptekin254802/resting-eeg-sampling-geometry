@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite the study and identify software version 2026-11-07; cite the source datasets as well."
+type: software
+title: "Temporal Sampling Geometry and Participant-Level Reproducibility in Fixed-Duration Resting EEG"
+version: "2026-11-07"
+date-released: "2026-11-07"
+repository-code: "https://github.com/alptekin254802/resting-eeg-sampling-geometry"
+authors:
+  - family-names: Cinbat
+    given-names: Alptekin
+  - family-names: Şentürk
+    given-names: Ümit
+  - family-names: Yücedağ
+    given-names: İbrahim
+# Software license; content licensing is specified in LICENSE.txt.
+license: MIT

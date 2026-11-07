@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "created_at_utc": "2026-11-06T20:21:54.630561+00:00",
+  "exploratory": true,
+  "intervals": "unadjusted participant-bootstrap 95%; linear percentiles",
+  "plan_deviation": false,
+  "hardware_filter_limitation": "Hardware low-pass cutoffs unknown; 55-95 Hz is an EMG proxy, not confirmed muscle activity.",
+  "cohorts": {
+    "ds005385": {
+      "N": 477,
+      "strict": {
+        "rho_tilde": {
+          "C": 0.9400538189575224,
+          "F5": 0.9622676774805188,
+          "F10": 0.9661003863944428
+        },
+        "mean_fisher_z": {
+          "C": 1.7385119081680867,
+          "F5": 1.9756694866790792,
+          "F10": 2.0302018721932584
+        },
+        "delta_z": 0.2916899640251719,
+        "ci95": [
+          0.22478128795593577,
+          0.34733548810886333
+        ],
+        "mcse": 0.004369794758102568
+      },
+      "original_same_subset": {
+        "rho_tilde": {
+          "C": 0.9379535867945366,
+          "F5": 0.9611064758117842,
+          "F10": 0.9652040671037024
+        },
+        "mean_fisher_z": {
+          "C": 1.7207525690347876,
+          "F5": 1.9602181789790871,
+          "F10": 2.0169254303500628
+        },
+        "delta_z": 0.296172861315275,
+        "ci95": [
+          0.2352915956008783,
+          0.34870555553185234
+        ],
+        "mcse": 0.004095671298512163
+      },
+      "paired_change": {
+        "delta_z": -0.004482897290103094,
+        "ci95": [
+          -0.03493783574233612,
+          0.022913750592715384
+        ],
+        "mcse": 0.005908898388967398
+      },
+      "bootstrap": {
+        "resamples": 5000,
+        "label": "artifact_emg_ds005385",
+        "seed": 1734386567627607253,
+        "indices_sha256": "f11c0897104b26dbcfbffaac639bf2ae9565e4172f125adc486b087b6e941cda"
+      },
+      "diagnostic_full_cohort": {
+        "N": 531,
+        "spearman_rho": 0.06839445372010756
+      },
+      "diagnostic_retained": {
+        "N": 477,
+        "spearman_rho": 0.042347933848137106
+      },
+      "original_marker_max_abs_error": 8.881784197001252e-16,
+      "interpretation": [
+        "Daha sıkı bir kas-artefaktı ölçütü kontrastı belirgin biçimde değiştirmedi."
+      ],
+      "schedule_hashes": {
+        "file_sha256": "95278f760daf6d7189ce9a62c09123368e7ce22d68084a215e87a94d7df606f3",
+        "schedule_uint8_C_order_sha256": "55690d357d28b6e7883442ac9d520555eec1e5610ed0887f0b67638d5428d03d"
+      }
+    },
+    "ds004148": {
+      "N": 51,
+      "strict": {
+        "rho_tilde": {
+          "C": 0.7732677636506969,
+          "F5": 0.8913044379115235,
+          "F10": 0.9129551032774244
+        },
+        "mean_fisher_z": {
+          "C": 1.0284047859590857,
+          "F5": 1.4282355413191112,
+          "F10": 1.5449902300316307
+        },
+        "delta_z": 0.5165854440725451,
+        "ci95": [
+          0.2719252645456574,
+          0.6989891042610802
+        ],
+        "mcse": 0.014036303359950056
+      },
+      "original_same_subset": {
+        "rho_tilde": {
+          "C": 0.7779334184884411,
+          "F5": 0.8890117551738533,
+          "F10": 0.9098013937198537
+        },
+        "mean_fisher_z": {
+          "C": 1.0401148571641843,
+          "F5": 1.4171923986031498,
+          "F10": 1.526370278889463
+        },
+        "delta_z": 0.48625542172527864,
+        "ci95": [
+          0.27720294756139224,
+          0.6318437817558614
+        ],
+        "mcse": 0.01479120038552127
+      },
+      "paired_change": {
+        "delta_z": 0.030330022347266505,
+        "ci95": [
+          -0.05509917488862059,
+          0.10686130043793286
+        ],
+        "mcse": 0.01997948707810524
+      },
+      "bootstrap": {
+        "resamples": 5000,
+        "label": "artifact_emg_ds004148",
+        "seed": 7312250668946274530,
+        "indices_sha256": "21d88bb9ff14b4089ab49a6545323914f345f60224e3d84e7938f0135895de91"
+      },
+      "diagnostic_full_cohort": {
+        "N": 59,
+        "spearman_rho": -0.10413706918388042
+      },
+      "diagnostic_retained": {
+        "N": 51,
+        "spearman_rho": 0.09849869019578966
+      },
+      "original_marker_max_abs_error": 8.881784197001252e-16,
+      "interpretation": [
+        "Daha sıkı bir kas-artefaktı ölçütü kontrastı belirgin biçimde değiştirmedi."
+      ],
+      "schedule_hashes": {
+        "file_sha256": "119f4aaa764b204a06a6e5232e386178c390dd1f1e2525c6fc1c77b9c64a7fb9",
+        "schedule_uint8_C_order_sha256": "d3d2565bebf22182fdacceb95f43dc7889cc8578e374306af6157c69b2196139"
+      }
+    }
+  }
+}

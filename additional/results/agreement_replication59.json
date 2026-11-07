@@ -1,0 +1,25 @@
+{
+  "cohort": "replication59",
+  "n": 59,
+  "unit": "percentage points",
+  "contrasts": [
+    {
+      "contrast": "F5-C",
+      "estimate_pp": -1.769631729531321,
+      "ci": [
+        -2.559098394221926,
+        -1.0526534959062734
+      ],
+      "fraction_participants_smaller": 0.7288135593220338
+    },
+    {
+      "contrast": "F10-C",
+      "estimate_pp": -2.0597758181787498,
+      "ci": [
+        -2.8883386917392757,
+        -1.3364805322980473
+      ],
+      "fraction_participants_smaller": 0.7796610169491526
+    }
+  ]
+}

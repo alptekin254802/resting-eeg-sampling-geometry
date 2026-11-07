@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-11-06T19:58:08.174746+00:00",
+  "python": "3.14.3",
+  "numpy": "2.3.4",
+  "plan_record_sha256": "f8e16aa9a929b968bd107da6e8979fc72328a99522809de9c97ccd6a19e8e362",
+  "input_sha256": {
+    "scripts/sampling_design.py": "14d9906208fe7c86be504e1d23c3eee75e37fd1747ee96925d525251c1b6b209",
+    "scripts/preregistered_analysis.py": "cb28c25f4f24d75090563605f28e5702a2a51b06988229da0cd6a6f6ee087bc1",
+    "scripts/reproduce_inputs.py": "0e6e68e798468b272ef1213ad8503714ac2fa699764813c2662fd589c6fa2cea",
+    "scripts/run_preregistered_analysis.py": "01b65036fde606d30ee20c19f0e590591630ea8d21ccd4483dcdd1a9043577e6",
+    "scripts/exploratory_sampling.py": "50ab3cfa8614e6ebed038ec70de875449375896fe679ed285a45cd40e5892de0",
+    "results/preregistered/scientific_results.npz": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78",
+    "docs/COMPUTATIONAL_CONVENTIONS.md": "7cdcd15f66d1207ba9baefd8108e5f28e04e25952d95a1e2b5facceb3d44a712",
+    "artifact_sensitivity/run_artifact.py": "34c15b21ae1b7c7d6afff9069f5068840cf1becd089f2308da3cb8d66036c471"
+  },
+  "sanitized": true,
+  "checksum_note": "These source checksums describe the scripts used for the recorded analysis. The release copy adapts paths and documentation; PACKAGE_CHECKSUMS.json lists its script checksums."
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-11-07T00:09:13.119445+00:00",
+  "relative_alpha_correlations_for_these_designs_calculated": false,
+  "checks_done_before_plan": "Data compatibility only: band-power function and unit comparison, reproduction of stored pre and post markers from cell powers and schedules (max abs diff 7.8e-16 and 5.6e-16), identifier intersection (N=509).",
+  "files": {
+    "ANALYSIS_PLAN.md": {
+      "sha256": "004096257d9a19058556042b507689c9ae2447b57395d4f5482b8108c3748c6f",
+      "mtime_utc": "2026-11-07T00:09:13.119031+00:00"
+    },
+    "ANALYSIS_PLAN.json": {
+      "sha256": "025346cc7cbe087ea7b9c8570289440dda4fc7d30f351e75fbb3d120f8115c4e",
+      "mtime_utc": "2026-11-07T00:09:04.142113+00:00"
+    }
+  }
+}

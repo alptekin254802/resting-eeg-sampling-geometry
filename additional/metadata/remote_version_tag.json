@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "refs/tags/1.0.3",
+    "node_id": "REF_kwDOMdXaZ69yZWZzL3RhZ3MvMS4wLjM",
+    "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005385/git/refs/tags/1.0.3",
+    "object": {
+      "sha": "6a558cd5852503e66df9ac7fdac2f3a7f4ed5f12",
+      "type": "commit",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005385/git/commits/6a558cd5852503e66df9ac7fdac2f3a7f4ed5f12"
+    }
+  }
+]

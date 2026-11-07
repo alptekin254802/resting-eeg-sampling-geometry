@@ -1,0 +1,31 @@
+{
+  "analysis": "duration_by_geometry",
+  "status": "exploratory",
+  "plan_record_utc": "2026-11-07T00:09:13.119445+00:00",
+  "code_sha256_before_run": {
+    "run_duration_geometry.py": "eb9f7b9f9531c585459f90b0aeaa3f2b8379afe76439f684cfdb99c624950bc3",
+    "test_duration_geometry.py": "8569fffa8134810eae883c780dd827139ae3d2c7acafe3d12596740b2af0dad1",
+    "ANALYSIS_PLAN.json": "025346cc7cbe087ea7b9c8570289440dda4fc7d30f351e75fbb3d120f8115c4e",
+    "ANALYSIS_PLAN.md": "004096257d9a19058556042b507689c9ae2447b57395d4f5482b8108c3748c6f"
+  },
+  "run_command": "python -B duration_geometry/run_duration_geometry.py --output <output folder>",
+  "archive_path": ". (archive root, edition 2026-11-06.1 inputs)",
+  "run_started_utc": "2026-11-07T00:11:19Z",
+  "log": [
+    "2026-11-07T00:11:21.408567+00:00 compatibility checks passed: {'pre_marker_max_abs_diff': 7.771561172376096e-16, 'post_marker_max_abs_diff': 5.551115123125783e-16, 'n_pre': 516, 'n_post': 524, 'n_common': 509, 'post_eligible_cells_min': 38, 'post_eligible_cells_max': 42, 'post_participants_with_all_42_cells': 489}",
+    "2026-11-07T00:12:10.332652+00:00 bootstrap start",
+    "2026-11-07T00:16:25.972168+00:00 bootstrap done",
+    "2026-11-07T00:16:26.502226+00:00 wrote duration_geometry (N = 509)"
+  ],
+  "exit_status": 0,
+  "software": {
+    "python": "3.14.3",
+    "numpy": "2.3.4",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7"
+  },
+  "attempts": 1,
+  "plan_deviation": false,
+  "sanitized": true,
+  "sanitized_note": "Local paths were replaced with archive-relative paths. Code checksums are those of the local run; the archive copies are identical."
+}

@@ -1,0 +1,61 @@
+# Artifact sensitivity analysis plan
+
+## status
+
+Exploratory; fixed before any new relative-alpha or rank outcome. Local timestamp and SHA-256 are an audit record, not an external preregistration.
+
+## question
+
+How much does distributed 10x4-s minus contiguous Fisher-z rank reproducibility change after an additional within-participant EMG screen?
+
+## cohorts
+
+Start from exactly the published primary 531 and replication 59 participants, in published order. Require all 200 paired draws for C, F5 and F10 under the strict mask. Exclude a participant if any required draw fails; no partial schedules, repairs or cohort additions.
+
+## estimator
+
+42 four-second cells in [8,176) s. O1, Oz, O2 referenced to mean(TP9,TP10). Reuse compute_cell_periodograms: linear detrend, periodic Hann, one-sided density periodogram at native 1000/500 Hz, 0.25-Hz grid. For alpha: mean of 10 periodograms within channel, then mean over channels; trapezoidal 8-13 / 1-30 Hz. Reuse cell_band_powers and arm_markers for algebraically equivalent linear power aggregation, never average cellwise ratios; verify against published original markers within absolute 1e-12 before inference.
+
+## emg
+
+For each participant, posterior channel and four-second cell, x=natural log(trapezoidal integral of its 55-95 Hz density periodogram, endpoints included, power in V^2). No alpha or 1-30 Hz quantity enters this criterion. Within each participant and channel, calculate median and MAD only over originally eligible cells; z=(x-median)/(1.4826*MAD). Flag an originally eligible cell if ANY posterior channel has z>3; strict_mask=original_mask AND NOT flagged. Equality at z=3 passes. No amplitude thresholds are tightened.
+
+## degenerate_values
+
+If MAD=0, define z=0 at the median and signed infinity for nonzero deviations, the limiting robust-z rule. Nonpositive or nonfinite eligible-cell EMG powers, undefined outcome correlations or infinite Fisher transforms stop analysis; no clipping, dropping or replacement. An undefined diagnostic due to a constant vector is reported as undefined.
+
+## filter_audit
+
+Before EMG processing or alpha outcomes, inspect every included EDF/BrainVision header and available matching local BIDS sidecar. Record header hashes, literal prefilter entries and filter-related metadata. If a numeric low-pass cutoff is <=95 Hz, stop before outcome processing; changing band requires a separate PLAN_DEVIATION.md before outcomes. Missing/NaN hardware cutoffs are explicitly unknown, not evidence of no filtering; retain 55-95 Hz without assuming hardware passband validity and report this limitation.
+
+## stage1
+
+Compute only EMG masks and deterministic sampling feasibility, with no relative-alpha or rank outcomes. Report flagged-count histogram/quantiles per participant, per-position flagged counts divided by original eligibility counts, adjacent flagged pairs and flagged-run lengths. Adjacent-pair random-placement reference is descriptive sum_i k_i(k_i-1)/42; no clustering test. Generate the exact 200-draw feasibility counts using the future strict-schedule seeds. If primary retained N<400, STOP here, save a stopped report and await user decision. No stage2/3 or optional outcome analysis after this stop.
+
+## schedules
+
+Reuse rebuild_schedule/draw_pair without changing candidate enumeration, strata, A/B nonoverlap, rejection limit or failure rules. Change ONLY dataset seed argument to ds005385-artifact-emg-2026-11 or ds004148-artifact-emg-2026-11. Keep ASCII prefix AUX004 and all other seed tokens. Seed is unsigned big-endian first eight SHA-256 bytes of {prefix}|{dataset_label}|{participant}|{regime}|{draw}|{arm}; NumPy default_rng/PCG64. Save schedules only after stage1 stop gate passes. Save NPZ-file hashes and C-order uint8 array hashes.
+
+## outcomes
+
+For each retained cohort and design, recompute across-participant Spearman midranks in each of 200 draws; Fisher-transform without clipping, average z and back-transform rho_tilde=tanh(mean z). Delta_z=mean_draw(z_F10-z_C). Comparator is the original marker array and original schedules on exactly the SAME retained participant subset, with correlations recomputed on that subset. Paired change=strict Delta_z-original Delta_z. MCSE is sample SD of draw-level contrast / sqrt(200), separately for strict, original and paired change.
+
+## bootstrap
+
+5000 participant resamples using generate_bootstrap_indices(N, artifact_emg_ds005385) or artifact_emg_ds004148. Full seed strings OSF-nh4d8|participant_bootstrap|artifact_emg_ds005385 and OSF-nh4d8|participant_bootstrap|artifact_emg_ds004148; same first-eight-byte SHA-256 rule and PCG64. Generate one (5000,N) int64 matrix per cohort in retained order and use it jointly for strict, original, all designs, draws and arms. Recompute Spearman midranks in every resample, including duplication ties. Save index hashes as little-endian int64 C order. Unadjusted two-sided 95% percentile intervals, NumPy method=linear, for strict and original contrast and their paired change. No significance test or equivalence claim.
+
+## diagnostic
+
+Spearman correlation of participant flagged-cell count against original relative alpha averaged across all three designs, 200 draws and both arms. Report separately for the full original cohort and the retained subset; this is diagnostic, with no p-value or selection threshold.
+
+## interpretation
+
+If strict Delta_z interval is above zero AND paired-change interval includes zero: 'Daha sıkı bir kas-artefaktı ölçütü kontrastı belirgin biçimde değiştirmedi.' No equivalence claim. If paired-change interval is wholly below zero, report its magnitude and that part of the contrast may be associated with clustered muscle artifacts. If strict interval includes zero, state this directly without softening. Otherwise describe estimates and intervals without forcing a branch. EMG power is a proxy, not proof of muscle origin.
+
+## outputs
+
+All new files go only to followup_artifact_2026-11. Do not alter original results, schedules, figures or manuscript. Deliver plan MD/JSON with identical content, PLAN_RECORD with SHA-256/timestamps, filter audit, stage1 JSON, participant and position CSVs, masks, schedules/hashes if gate passes, results_summary.json, small LaTeX table (no long dash; missing entries --), short Turkish SONUC_NOTU.txt, <=2 suggested manuscript sentences and <=1 suggested Online Resource paragraph, one-command script and short invariants test. If stopped, outcomes and schedule files are absent and table/report explicitly say not computed.
+
+## optional
+
+The optional pre/post absolute-difference add-on is not selected for this run; it would need its own prior plan. No pre/post marker arrays will be opened.

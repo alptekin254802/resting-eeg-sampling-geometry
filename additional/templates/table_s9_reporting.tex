@@ -1,0 +1,28 @@
+\begin{table}[H]
+\centering
+\caption{Suggested reporting considerations for temporal sampling in resting-EEG spectral analyses.}
+\label{tab:reporting}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}p{0.21\textwidth}p{0.33\textwidth}X@{}}
+\toprule
+Reporting item & Why it matters & Example description \\
+\midrule
+Measurement target & Identifies what kind of consistency the design evaluates. & Across-participant ranks were compared between two samples from one recording; separate-recording comparisons were reported separately. \\
+Paired-sample timing & Describes the temporal relationship between repeated estimates. & A/B samples did not overlap; centroid separation summarized their relative timing. \\
+Total retained duration & Separates data quantity from the span over which observations were obtained. & Forty seconds entered each estimate. \\
+Elementary window duration & Sets the elementary time scale and contributes to spectral resolution. & Ten non-overlapping 4-s periodograms were used. \\
+Number of windows & Makes duration accounting and aggregation transparent. & Ten elementary periodograms were averaged for each estimate. \\
+Temporal placement & Distinguishes contiguous from clustered or distributed retention. & Windows were selected as one contiguous block or across ordered temporal sections. \\
+Covered temporal span & Indicates how broadly the retained sample represents the recording. & Report the candidate interval and summarize the span from the first selected window to the last across samples. \\
+Window-selection rule & Allows the sampling procedure to be reproduced. & Candidate enumeration, temporal partitioning, and the random selection rule were specified. \\
+Overlap and spacing & Clarifies dependence and whether physical gaps are guaranteed. & Samples did not overlap; adjacent selections across temporal sections were permitted. \\
+Treatment of separated windows & Prevents concatenation from silently changing the spectral estimator. & Each window was transformed separately before PSD averaging. \\
+Relation to artifact rejection & Shows whether preprocessing itself created or altered temporal fragmentation. & Eligibility was defined on common usable support before geometry-specific sampling. \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+\begin{minipage}{0.98\textwidth}
+\footnotesize \textit{Note.} These are suggested reporting considerations, not a validated universal minimum standard. Their relevance depends on the scientific target, recording context, and estimator.
+\end{minipage}
+\end{table}

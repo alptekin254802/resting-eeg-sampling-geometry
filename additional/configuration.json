@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-10-31T22:52:59.423860+00:00",
+  "status": "New exploratory follow-up, planned after knowledge of original results; not original preregistration",
+  "namespace": "temporal-sampling-followup-2026-11-01-v1",
+  "draws": 200,
+  "bootstrap_resamples": 5000,
+  "bootstrap_unit": "participant; same resample across all compared features, geometries and pairings; rerank duplicates with midranks; percentile 2.5/97.5 linear; no epsilon clipping",
+  "A_pairing": {
+    "n": 516,
+    "regimes": [
+      "C",
+      "F10"
+    ],
+    "arms": "Original 200 A and 200 B per participant and regime; B used once; reject any overlapping A/B pair",
+    "cost": "4 * sum of nearest distances from A cells to B and B to A / 20; symmetric nearest-cell distance in seconds",
+    "matching": [
+      "original",
+      "minimum total cost",
+      "maximum total cost"
+    ],
+    "tie_break": "Use exact integer cost times 10^9 plus deterministic bounded hashed-edge integer <10^6; n=200 secondary total cannot override 1 primary cost unit. scipy linear_sum_assignment. Outcomes never used.",
+    "feasibility": "Report achieved distance and fraction changed before inference. No minimum effect-based go/no-go threshold; even a narrow range is reported as limited perturbation.",
+    "statistics": "rho by regime/pairing; F10-C delta z; paired changes versus original and far-near with common bootstrap"
+  },
+  "B_agreement": {
+    "cohorts": [
+      "primary531",
+      "replication59"
+    ],
+    "participant_summary": "median across 200 draws of 100*abs(A-B), percentage points",
+    "cohort_summary": "mean participant median; paired F10-C and descriptive F5-C; participant bootstrap",
+    "plots": "ECDF per geometry and distribution of paired participant changes; no independent-observation Bland-Altman limits"
+  },
+  "C_normalization": {
+    "n": 516,
+    "features": [
+      "relative_alpha",
+      "absolute_alpha",
+      "nonalpha_1_30_power"
+    ],
+    "aggregation": "Mean selected cell alpha A and total T; R=A/T, nonalpha=T-A; never average cell ratios",
+    "statistics": "Same-sample F10-C delta z with paired bootstrap, and differences versus relative-alpha contrast; no causal decomposition"
+  },
+  "D_pre_post": {
+    "dataset": "ds005385 v1.0.3",
+    "snapshot_commit": "6a558cd5852503e66df9ac7fdac2f3a7f4ed5f12",
+    "candidate_roster": "Original 531 eligible pre participants; inspect corresponding session1 post EC; exclude metadata not ONLY-INITIAL-BOUNDARY, noncontinuous header, <180s, missing channels, failed time QC/schedule",
+    "processing": "Original 42x4s [8,176) support, linked mastoids, periodogram and time QC; no filtering/resampling",
+    "schedules": "Original pre schedules; new independent post streams by dataset label ds005385-post-followup-2026-11-01, original C/F5/F10 constructions and 200 draws",
+    "comparison": "Common pre/post eligible participants; within-pre and within-post A/B rank statistics, then pre-A vs post-A across participants by each draw (B/B secondary check); same-draw index is independent across recordings",
+    "inference": "5000 participant bootstrap shared across within/cross-record comparisons; F10-C and descriptive F5; no pure test-retest/fatigue-causal interpretation",
+    "boundary_sensitivity": "Also common sample excluding the five pre boundary-flagged participants from existing sensitivity record and post records whose boundary annotations occur beyond initial event; report when applicable",
+    "implementation_notes": "The candidate_roster field retains the initial plan wording. The executed screen matched the original implemented pre-recording screen: boundary-only event types were allowed, without restrictions on event counts or onsets. The main comparison therefore includes records with additional boundary annotations. The sensitivity excluded the union of the five previously flagged pre records and post records with event_count > 1, irrespective of annotation timing. The manuscript reports this implemented procedure explicitly."
+  }
+}

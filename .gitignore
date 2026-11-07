@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+outputs/
+raw_data/
+raw_metadata/
+additional/raw_post/
+additional/results/post_participants/
+additional/metadata/runtime_home/
+raw/
+topography/cache/

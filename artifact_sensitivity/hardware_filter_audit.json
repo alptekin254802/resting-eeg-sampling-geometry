@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-11-06T20:02:54.612949+00:00",
+  "before_emg_and_alpha": true,
+  "sanitized": true,
+  "source_audit_sha256": "b55525bc72837b23e33a9b7e399b0cf11c6ac7a4e877e4a7e014b1080468f4f9",
+  "summary": "Summary of the raw headers and sidecars checked before the analysis. Acquisition information from the later literature check is in docs/SUPPLEMENTARY_DETAILS.md, section 13.",
+  "numeric_conflicts": [],
+  "cohorts": {
+    "ds005385": {
+      "N": 531,
+      "sidecars_checked": 531,
+      "prefilter_fields": {
+        "LP:   NaN Hz; HP:   NaN Hz; Notch: NaN": 2655
+      },
+      "filter_lines_present": 0,
+      "sidecar_filter_fields": {
+        "{\"SoftwareFilters\": \"n/a\"}": 531
+      },
+      "numeric_hardware_lowpass_in_headers": null
+    },
+    "ds004148": {
+      "N": 59,
+      "sidecars_checked": 59,
+      "prefilter_fields": {},
+      "filter_lines_present": 59,
+      "sidecar_filter_fields": {
+        "{\"SoftwareFilters\": \"n/a\"}": 59
+      },
+      "numeric_hardware_lowpass_in_headers": null
+    }
+  }
+}

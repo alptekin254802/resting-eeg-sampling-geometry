@@ -1,0 +1,14 @@
+{
+  "recorded_at_utc": "2026-11-06T19:58:06.344580+00:00",
+  "relative_alpha_or_rank_outcomes_calculated": false,
+  "files": {
+    "ANALYSIS_PLAN.md": {
+      "sha256": "2a37813f6d3072121df58b930b2311156025e647e3a4e8ee18bd9e897ff2e144",
+      "mtime_utc": "2026-11-06T19:58:06.344234+00:00"
+    },
+    "ANALYSIS_PLAN.json": {
+      "sha256": "f956cfd1f7eda2c1113be25d9bbf5de5d01494d3e026a8e83868db2a1e440c86",
+      "mtime_utc": "2026-11-06T19:58:06.343234+00:00"
+    }
+  }
+}

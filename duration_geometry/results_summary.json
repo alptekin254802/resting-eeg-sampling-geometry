@@ -1,0 +1,336 @@
+{
+  "analysis": "duration_by_geometry",
+  "status": "exploratory",
+  "multiplicity_correction": "none",
+  "interpretation_note": "The outcome is agreement with a measurement from a separate post-battery recording. It is not a biological true level and includes any change in state after the battery. Interval overlap is not used to claim that two designs are equal.",
+  "n": 509,
+  "draws": 200,
+  "bootstrap_resamples": 5000,
+  "draw_seed_namespace": "duration-geometry-2026-11-07|{participant}|{design}|{draw}",
+  "bootstrap_seed_string": "OSF-nh4d8|participant_bootstrap|duration_geometry_bootstrap",
+  "bootstrap_seed": 6784921211910029168,
+  "bootstrap_index_sha256": "c8e2086d98015126f032411440c648d1eae568fd5bcda63d5e8149b8e0e8b73e",
+  "interval": "2.5th and 97.5th percentiles, NumPy method linear",
+  "mcse_rule": "design: SD(ddof=1) of 200 draw z / sqrt(200); contrast: sqrt(sum of squared design MCSE), independent seed streams",
+  "participant_ids_sha256": "be1d9334650478d5cec051f6df2c6dba8421c78cc6ffbb9bad449884e8f8d928",
+  "schedule_sha256_uint8_c_order": {
+    "contiguous_5": "4ebf9cc1771f924d8aad2f6d924206b7fa2ef1fd9ffb0ec68b155208ea26ab2b",
+    "contiguous_10": "f791e9ca003c537d26c252bf7124d3591a7c7e5a9f806ddfd4c4bcce8ee5ffbf",
+    "contiguous_20": "f58f0e5a54200da2c1be3c6c22c7a2e76094e2147958ea8ca205ac41df0f4250",
+    "distributed_5": "f10e16735c1586161045580541e23b280349f99a9600bdfda6d6975aed048e7d",
+    "distributed_10": "6ebc0dfa30e7554b24ed1caa7a728de82a15887fb20e37f35cc5d581e5e33716",
+    "distributed_20": "7a244ada63a8d1a397331d893328e820ace45a704dea7463a9d54f824eaa8f03"
+  },
+  "input_sha256": {
+    "results/exploratory_2026-09-20/cell_band_powers.npz": "2725cbb838cae2bfe58dd4e74ffcf1bf3f783e1ee7e631410716e5718f26f6d0",
+    "additional/results/post_prepared.npz": "e8952452c7143b9e95d7b83a3d20b1596903af40b947eb13eea8cc2a49b29e9a",
+    "results/preregistered/scientific_results.npz": "f0b0ec15935aa00d8120150e7eea01e59d50e3fb45a83ad63ce6d1aa5f66ae78"
+  },
+  "compatibility_checks": {
+    "pre_marker_max_abs_diff": 7.771561172376096e-16,
+    "post_marker_max_abs_diff": 5.551115123125783e-16,
+    "n_pre": 516,
+    "n_post": 524,
+    "n_common": 509,
+    "post_eligible_cells_min": 38,
+    "post_eligible_cells_max": 42,
+    "post_participants_with_all_42_cells": 489
+  },
+  "designs": [
+    {
+      "design": "contiguous_5",
+      "placement": "contiguous",
+      "cells": 5,
+      "duration_s": 20,
+      "mean_z": 1.1730567813529722,
+      "rho_tilde": 0.8252496333337777,
+      "rho_tilde_ci95": [
+        0.793954102870571,
+        0.8525784525951537
+      ],
+      "mean_z_ci95": [
+        1.0820392565175636,
+        1.265518776786565
+      ],
+      "mean_raw_rho": 0.8250587998700556,
+      "mean_raw_rho_ci95": [
+        0.7935106035604376,
+        0.8522166023431663
+      ],
+      "mcse_mean_z": 0.0019110912577329502,
+      "draw_rho_min": 0.8015045530611112,
+      "draw_rho_max": 0.8509292212158908
+    },
+    {
+      "design": "contiguous_10",
+      "placement": "contiguous",
+      "cells": 10,
+      "duration_s": 40,
+      "mean_z": 1.230321263856343,
+      "rho_tilde": 0.8426724862579186,
+      "rho_tilde_ci95": [
+        0.810942355087167,
+        0.8691586752549569
+      ],
+      "mean_z_ci95": [
+        1.1297753294245059,
+        1.3296291873934185
+      ],
+      "mean_raw_rho": 0.8425650081761275,
+      "mean_raw_rho_ci95": [
+        0.8107626676322273,
+        0.8690058992254108
+      ],
+      "mcse_mean_z": 0.0014865238953359824,
+      "draw_rho_min": 0.8242767744289677,
+      "draw_rho_max": 0.8567092019426151
+    },
+    {
+      "design": "contiguous_20",
+      "placement": "contiguous",
+      "cells": 20,
+      "duration_s": 80,
+      "mean_z": 1.2752247720841774,
+      "rho_tilde": 0.8552074192224749,
+      "rho_tilde_ci95": [
+        0.8231682182862349,
+        0.8809462905493901
+      ],
+      "mean_z_ci95": [
+        1.1665660755379277,
+        1.379977772007693
+      ],
+      "mean_raw_rho": 0.8551566449576907,
+      "mean_raw_rho_ci95": [
+        0.8230874075044853,
+        0.8808866274189446
+      ],
+      "mcse_mean_z": 0.0010534940825213572,
+      "draw_rho_min": 0.8433556792919664,
+      "draw_rho_max": 0.8647981538422339
+    },
+    {
+      "design": "distributed_5",
+      "placement": "distributed",
+      "cells": 5,
+      "duration_s": 20,
+      "mean_z": 1.2086684634313585,
+      "rho_tilde": 0.8362796262323419,
+      "rho_tilde_ci95": [
+        0.8047938183986874,
+        0.8628731980987382
+      ],
+      "mean_z_ci95": [
+        1.1120726473457063,
+        1.3044846229580196
+      ],
+      "mean_raw_rho": 0.8361246365786387,
+      "mean_raw_rho_ci95": [
+        0.8044483117924486,
+        0.8626447048017288
+      ],
+      "mcse_mean_z": 0.0017595957428391785,
+      "draw_rho_min": 0.8129227403722344,
+      "draw_rho_max": 0.8575531129797959
+    },
+    {
+      "design": "distributed_10",
+      "placement": "distributed",
+      "cells": 10,
+      "duration_s": 40,
+      "mean_z": 1.2650155755452288,
+      "rho_tilde": 0.8524409643396987,
+      "rho_tilde_ci95": [
+        0.8212624622047177,
+        0.8779079610084393
+      ],
+      "mean_z_ci95": [
+        1.1606833698178654,
+        1.3665692356264274
+      ],
+      "mean_raw_rho": 0.8523786807360971,
+      "mean_raw_rho_ci95": [
+        0.8211227868676733,
+        0.877784421578519
+      ],
+      "mcse_mean_z": 0.0011591111111594683,
+      "draw_rho_min": 0.8407944629826622,
+      "draw_rho_max": 0.8633577540355127
+    },
+    {
+      "design": "distributed_20",
+      "placement": "distributed",
+      "cells": 20,
+      "duration_s": 80,
+      "mean_z": 1.2951601334104674,
+      "rho_tilde": 0.8604720086743501,
+      "rho_tilde_ci95": [
+        0.8288139716701275,
+        0.8857199710036482
+      ],
+      "mean_z_ci95": [
+        1.184336041329425,
+        1.401706571673738
+      ],
+      "mean_raw_rho": 0.860449981845994,
+      "mean_raw_rho_ci95": [
+        0.8287699743015363,
+        0.8856768671030444
+      ],
+      "mcse_mean_z": 0.0007044033546281307,
+      "draw_rho_min": 0.8541100396658207,
+      "draw_rho_max": 0.8687272449316654
+    }
+  ],
+  "contrasts": [
+    {
+      "family": "a_placement",
+      "contrast": "distributed_5 - contiguous_5",
+      "delta_z": 0.035611682078386275,
+      "delta_z_ci95": [
+        0.02292839142303179,
+        0.04903635584725899
+      ],
+      "raw_difference": 0.011065836708583077,
+      "raw_difference_ci95": [
+        0.007367614005511977,
+        0.01515838120086708
+      ],
+      "difference_of_rho_tilde": 0.011029992898564212,
+      "mcse_delta_z": 0.00259777731409008
+    },
+    {
+      "family": "a_placement",
+      "contrast": "distributed_10 - contiguous_10",
+      "delta_z": 0.034694311688885815,
+      "delta_z_ci95": [
+        0.02104331092002084,
+        0.05039834782875511
+      ],
+      "raw_difference": 0.009813672559969677,
+      "raw_difference_ci95": [
+        0.0060135858444931075,
+        0.014374502157865498
+      ],
+      "difference_of_rho_tilde": 0.009768478081780163,
+      "mcse_delta_z": 0.001885017734510262
+    },
+    {
+      "family": "a_placement",
+      "contrast": "distributed_20 - contiguous_20",
+      "delta_z": 0.019935361326290035,
+      "delta_z_ci95": [
+        0.004019940874006767,
+        0.03602064486305922
+      ],
+      "raw_difference": 0.005293336888303246,
+      "raw_difference_ci95": [
+        0.0010961289950922215,
+        0.009698625679141785
+      ],
+      "difference_of_rho_tilde": 0.005264589451875246,
+      "mcse_delta_z": 0.0012672939153641038
+    },
+    {
+      "family": "b_duration",
+      "contrast": "contiguous_10 - contiguous_5",
+      "delta_z": 0.057264482503370795,
+      "delta_z_ci95": [
+        0.04337728437395873,
+        0.07078998923779481
+      ],
+      "raw_difference": 0.017506208306071858,
+      "raw_difference_ci95": [
+        0.014225286079155023,
+        0.020964785523451844
+      ],
+      "difference_of_rho_tilde": 0.01742285292414092,
+      "mcse_delta_z": 0.0024211615160472403
+    },
+    {
+      "family": "b_duration",
+      "contrast": "contiguous_20 - contiguous_10",
+      "delta_z": 0.0449035082278344,
+      "delta_z_ci95": [
+        0.03184970660741184,
+        0.05807903601919021
+      ],
+      "raw_difference": 0.012591636781563276,
+      "raw_difference_ci95": [
+        0.009533933415150344,
+        0.0158859892985928
+      ],
+      "difference_of_rho_tilde": 0.012534932964556322,
+      "mcse_delta_z": 0.0018219777916627796
+    },
+    {
+      "family": "b_duration",
+      "contrast": "distributed_10 - distributed_5",
+      "delta_z": 0.056347112113870335,
+      "delta_z_ci95": [
+        0.04531777658047288,
+        0.06740264137529366
+      ],
+      "raw_difference": 0.016254044157458458,
+      "raw_difference_ci95": [
+        0.013675153013104449,
+        0.019061125187284953
+      ],
+      "difference_of_rho_tilde": 0.01616133810735687,
+      "mcse_delta_z": 0.002107063299056556
+    },
+    {
+      "family": "b_duration",
+      "contrast": "distributed_20 - distributed_10",
+      "delta_z": 0.03014455786523862,
+      "delta_z_ci95": [
+        0.02189629202697902,
+        0.038609812102433534
+      ],
+      "raw_difference": 0.008071301109896845,
+      "raw_difference_ci95": [
+        0.006284065887687035,
+        0.009945981702244233
+      ],
+      "difference_of_rho_tilde": 0.008031044334651405,
+      "mcse_delta_z": 0.0013563637616895777
+    },
+    {
+      "family": "c_placement_versus_duration",
+      "contrast": "distributed_5 - contiguous_10",
+      "delta_z": -0.02165280042498452,
+      "delta_z_ci95": [
+        -0.0361751684872402,
+        -0.0064790278555450645
+      ],
+      "raw_difference": -0.006440371597488781,
+      "raw_difference_ci95": [
+        -0.010707276183449816,
+        -0.0019596540856536325
+      ],
+      "difference_of_rho_tilde": -0.006392860025576708,
+      "mcse_delta_z": 0.0023034605422326258
+    },
+    {
+      "family": "c_placement_versus_duration",
+      "contrast": "distributed_10 - contiguous_20",
+      "delta_z": -0.010209196538948584,
+      "delta_z_ci95": [
+        -0.02601288422962045,
+        0.0058746691807118915
+      ],
+      "raw_difference": -0.0027779642215935985,
+      "raw_difference_ci95": [
+        -0.006996676686121589,
+        0.0016853972445309646
+      ],
+      "difference_of_rho_tilde": -0.0027664548827761593,
+      "mcse_delta_z": 0.0015663295789586729
+    }
+  ],
+  "software": {
+    "python": "3.14.3",
+    "numpy": "2.3.4",
+    "scipy": "1.16.3"
+  }
+}

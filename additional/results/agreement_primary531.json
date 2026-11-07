@@ -1,0 +1,25 @@
+{
+  "cohort": "primary531",
+  "n": 531,
+  "unit": "percentage points",
+  "contrasts": [
+    {
+      "contrast": "F5-C",
+      "estimate_pp": -1.4739394306215696,
+      "ci": [
+        -1.766330414033238,
+        -1.1932262698759322
+      ],
+      "fraction_participants_smaller": 0.6440677966101694
+    },
+    {
+      "contrast": "F10-C",
+      "estimate_pp": -1.6536170680480076,
+      "ci": [
+        -1.9370423718661807,
+        -1.377254273903927
+      ],
+      "fraction_participants_smaller": 0.6629001883239172
+    }
+  ]
+}

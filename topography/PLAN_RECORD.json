@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-11-07T01:04:50.623165+00:00",
+  "channel_level_outcomes_calculated": false,
+  "files": {
+    "ANALYSIS_PLAN.md": {
+      "sha256": "18b47ac11956dc1c613baa784cbeba0a63b81d9adfdbf122eb453bba17492627"
+    },
+    "ANALYSIS_PLAN.json": {
+      "sha256": "246714022fa33fa8d9f38c56572c4ed06725ce28c66549717e0c49a23d4efd30"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+2026-11-07T01:04:50.655145+00:00 plan recorded
+2026-11-07T01:04:57.554137+00:00 extract pre: 0/531 already done
+2026-11-07T01:06:50+00:00 plan deviation 1 recorded (channel order; see PLAN_DEVIATION.md)
+2026-11-07T01:06:52.284371+00:00 extract pre: 67/531 already done
+2026-11-07T01:09:00.236388+00:00 extract pre: processed 216 in this run, 248 remaining
+2026-11-07T01:09:07.985315+00:00 extract pre: 283/531 already done
+2026-11-07T01:11:27.156313+00:00 extract pre: processed 223 in this run, 25 remaining
+2026-11-07T01:11:35.095000+00:00 extract pre: 506/531 already done
+2026-11-07T01:11:54.722705+00:00 extract pre: processed 25 in this run, 0 remaining
+2026-11-07T01:11:56.299145+00:00 extract post: 0/524 already done
+2026-11-07T01:13:34.689356+00:00 extract post: processed 160 in this run, 364 remaining
+2026-11-07T01:13:53.619733+00:00 extract post: 160/524 already done
+2026-11-07T01:16:12.263914+00:00 extract post: processed 216 in this run, 148 remaining
+2026-11-07T01:17:49.169949+00:00 extract post: 376/524 already done
+2026-11-07T01:19:19.250285+00:00 extract post: processed 148 in this run, 0 remaining
+2026-11-07T01:19:43.282548+00:00 assembled pre: (531, 42, 62, 2)
+2026-11-07T01:20:02.822358+00:00 assembled post: (524, 42, 62, 2)
+2026-11-07T01:21:28.806456+00:00 validation passed=True
+2026-11-07T01:21:32.947421+00:00 inference start; plan recorded at 2026-11-07T01:04:50.623165+00:00
+2026-11-07T01:22:46.704675+00:00 within: channel Fp1 done
+2026-11-07T01:22:46.753377+00:00 within: channel Fp2 done
+2026-11-07T01:23:18.292469+00:00 within: channel F7 done
+2026-11-07T01:23:18.292805+00:00 within: channel F3 done
+2026-11-07T01:23:50.033429+00:00 within: channel Fz done
+2026-11-07T01:23:51.381843+00:00 within: channel F4 done
+2026-11-07T01:24:21.459750+00:00 within: channel F8 done
+2026-11-07T01:24:23.515339+00:00 within: channel FC5 done
+2026-11-07T01:24:52.503680+00:00 within: channel FC1 done
+2026-11-07T01:24:55.369466+00:00 within: channel FC2 done
+2026-11-07T01:25:23.810050+00:00 within: channel FC6 done
+2026-11-07T01:25:26.553077+00:00 within: channel T7 done
+2026-11-07T01:25:54.425664+00:00 within: channel C3 done
+2026-11-07T01:25:57.555613+00:00 within: channel Cz done
+2026-11-07T01:26:26.234100+00:00 within: channel C4 done
+2026-11-07T01:26:28.597669+00:00 within: channel T8 done
+2026-11-07T01:26:59.987084+00:00 within: channel CP5 done
+2026-11-07T01:27:01.718831+00:00 within: channel CP1 done
+2026-11-07T01:27:32.477690+00:00 within: channel CP2 done
+2026-11-07T01:27:34.435444+00:00 within: channel CP6 done
+2026-11-07T01:28:05.102366+00:00 within: channel P7 done
+2026-11-07T01:28:06.673478+00:00 within: channel P3 done
+2026-11-07T01:28:37.153319+00:00 within: channel Pz done
+2026-11-07T01:28:38.485273+00:00 within: channel P4 done
+2026-11-07T01:29:08.441681+00:00 within: channel P8 done
+2026-11-07T01:29:10.869226+00:00 within: channel PO9 done
+2026-11-07T01:29:40.483839+00:00 within: channel O1 done
+2026-11-07T01:29:43.770521+00:00 within: channel Oz done
+2026-11-07T01:30:11.221725+00:00 within: channel O2 done
+2026-11-07T01:30:14.589348+00:00 within: channel PO10 done
+2026-11-07T01:30:41.238248+00:00 within: channel AF7 done
+2026-11-07T01:30:44.881725+00:00 within: channel AF3 done
+2026-11-07T01:31:10.762118+00:00 within: channel AF4 done
+2026-11-07T01:31:14.152641+00:00 within: channel AF8 done
+2026-11-07T01:31:40.908105+00:00 within: channel F5 done
+2026-11-07T01:31:44.470115+00:00 within: channel F1 done
+2026-11-07T01:32:11.009619+00:00 within: channel F2 done
+2026-11-07T01:32:14.568090+00:00 within: channel F6 done
+2026-11-07T01:32:42.043856+00:00 within: channel FT9 done
+2026-11-07T01:32:45.257699+00:00 within: channel FT7 done
+2026-11-07T01:33:13.807522+00:00 within: channel FC3 done
+2026-11-07T01:33:16.459571+00:00 within: channel FC4 done
+2026-11-07T01:33:44.069315+00:00 within: channel FT8 done
+2026-11-07T01:33:46.568911+00:00 within: channel FT10 done
+2026-11-07T01:34:13.923329+00:00 within: channel C5 done
+2026-11-07T01:34:17.897638+00:00 within: channel C1 done
+2026-11-07T01:34:43.525987+00:00 within: channel C2 done
+2026-11-07T01:34:48.205777+00:00 within: channel C6 done
+2026-11-07T01:35:14.313496+00:00 within: channel TP7 done
+2026-11-07T01:35:18.725345+00:00 within: channel CP3 done
+2026-11-07T01:35:45.140840+00:00 within: channel CPz done
+2026-11-07T01:35:50.082472+00:00 within: channel CP4 done
+2026-11-07T01:36:17.002056+00:00 within: channel TP8 done
+2026-11-07T01:36:21.920783+00:00 within: channel P5 done
+2026-11-07T01:36:49.086823+00:00 within: channel P1 done
+2026-11-07T01:36:53.978435+00:00 within: channel P2 done
+2026-11-07T01:37:20.837464+00:00 within: channel P6 done
+2026-11-07T01:37:25.388028+00:00 within: channel PO7 done
+2026-11-07T01:37:53.403724+00:00 within: channel PO3 done
+2026-11-07T01:37:58.493418+00:00 within: channel POz done
+2026-11-07T01:38:25.373213+00:00 within: channel PO4 done
+2026-11-07T01:38:31.713643+00:00 within: channel PO8 done
+2026-11-07T01:39:23.332486+00:00 between: channel Fp1 done
+2026-11-07T01:39:23.669383+00:00 between: channel Fp2 done
+2026-11-07T01:39:54.218732+00:00 between: channel F7 done
+2026-11-07T01:39:54.221457+00:00 between: channel F3 done
+2026-11-07T01:40:23.943898+00:00 between: channel Fz done
+2026-11-07T01:40:24.608448+00:00 between: channel F4 done
+2026-11-07T01:40:53.473467+00:00 between: channel F8 done
+2026-11-07T01:40:54.209229+00:00 between: channel FC5 done
+2026-11-07T01:41:23.361951+00:00 between: channel FC1 done
+2026-11-07T01:41:23.550777+00:00 between: channel FC2 done
+2026-11-07T01:41:53.223507+00:00 between: channel FC6 done
+2026-11-07T01:41:53.440718+00:00 between: channel T7 done
+2026-11-07T01:42:23.191119+00:00 between: channel C3 done
+2026-11-07T01:42:23.597582+00:00 between: channel Cz done
+2026-11-07T01:42:54.304160+00:00 between: channel C4 done
+2026-11-07T01:42:54.603680+00:00 between: channel T8 done
+2026-11-07T01:43:24.465652+00:00 between: channel CP5 done
+2026-11-07T01:43:25.073370+00:00 between: channel CP1 done
+2026-11-07T01:43:54.848751+00:00 between: channel CP2 done
+2026-11-07T01:43:56.385230+00:00 between: channel CP6 done
+2026-11-07T01:44:25.542391+00:00 between: channel P7 done
+2026-11-07T01:44:27.054496+00:00 between: channel P3 done
+2026-11-07T01:44:55.201679+00:00 between: channel Pz done
+2026-11-07T01:44:56.709334+00:00 between: channel P4 done
+2026-11-07T01:45:24.526005+00:00 between: channel P8 done
+2026-11-07T01:45:26.105496+00:00 between: channel PO9 done
+2026-11-07T01:45:55.768544+00:00 between: channel O1 done
+2026-11-07T01:45:57.377615+00:00 between: channel Oz done
+2026-11-07T01:46:26.729684+00:00 between: channel O2 done
+2026-11-07T01:46:28.455179+00:00 between: channel PO10 done
+2026-11-07T01:46:58.031457+00:00 between: channel AF7 done
+2026-11-07T01:47:01.273434+00:00 between: channel AF3 done
+2026-11-07T01:47:29.140149+00:00 between: channel AF4 done
+2026-11-07T01:47:31.981105+00:00 between: channel AF8 done
+2026-11-07T01:47:59.896293+00:00 between: channel F5 done
+2026-11-07T01:48:02.865932+00:00 between: channel F1 done
+2026-11-07T01:48:31.058549+00:00 between: channel F2 done
+2026-11-07T01:48:34.104188+00:00 between: channel F6 done
+2026-11-07T01:49:02.024355+00:00 between: channel FT9 done
+2026-11-07T01:49:05.557260+00:00 between: channel FT7 done
+2026-11-07T01:49:34.016428+00:00 between: channel FC3 done
+2026-11-07T01:49:37.806323+00:00 between: channel FC4 done
+2026-11-07T01:50:10.551232+00:00 between: channel FT8 done
+2026-11-07T01:50:13.128453+00:00 between: channel FT10 done
+2026-11-07T01:50:44.606162+00:00 between: channel C5 done
+2026-11-07T01:50:48.101459+00:00 between: channel C1 done
+2026-11-07T01:51:17.491767+00:00 between: channel C2 done
+2026-11-07T01:51:20.749852+00:00 between: channel C6 done
+2026-11-07T01:51:51.537267+00:00 between: channel TP7 done
+2026-11-07T01:51:55.014332+00:00 between: channel CP3 done
+2026-11-07T01:52:23.806485+00:00 between: channel CPz done
+2026-11-07T01:52:26.227858+00:00 between: channel CP4 done
+2026-11-07T01:52:55.975849+00:00 between: channel TP8 done
+2026-11-07T01:52:58.777314+00:00 between: channel P5 done
+2026-11-07T01:53:31.376537+00:00 between: channel P1 done
+2026-11-07T01:53:34.151740+00:00 between: channel P2 done
+2026-11-07T01:54:08.349322+00:00 between: channel P6 done
+2026-11-07T01:54:10.929678+00:00 between: channel PO7 done
+2026-11-07T01:54:42.257361+00:00 between: channel PO3 done
+2026-11-07T01:54:45.400119+00:00 between: channel POz done
+2026-11-07T01:55:14.354730+00:00 between: channel PO4 done
+2026-11-07T01:55:18.461192+00:00 between: channel PO8 done
+2026-11-07T01:55:18.725186+00:00 inference complete
+2026-11-07T01:55:23.603738+00:00 report written
+note: run_topography.py was edited during the run without changing the band-power code: (1) channel-set check for deviation 1 (before the remaining extraction); (2) an integer-exact bootstrap path for columns without ties, which gives the same values as the general path (before inference); (3) archive-layout paths and RUN_RECORD.json output (after inference, before report). Extraction ran on Linux (Python 3.10.12, NumPy 2.2.6, SciPy 1.15.3, MNE 1.10.2); validate, infer and report ran on Linux (Python 3.13.18).

@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-31T22:57:29.214395+00:00",
+  "outcomes_not_used_for_matching": true,
+  "all_bijections_nonoverlapping": true,
+  "marginal_markers_unchanged": true,
+  "rows": [
+    {
+      "regime": "C",
+      "pairing": "original",
+      "n": 516,
+      "mean_distance_s": 49.57375968992248,
+      "mean_changed_fraction": 0.0
+    },
+    {
+      "regime": "C",
+      "pairing": "near",
+      "n": 516,
+      "mean_distance_s": 35.94476744186046,
+      "mean_changed_fraction": 0.9904263565891472
+    },
+    {
+      "regime": "C",
+      "pairing": "far",
+      "n": 516,
+      "mean_distance_s": 52.69468992248062,
+      "mean_changed_fraction": 0.9896996124031008
+    },
+    {
+      "regime": "F10",
+      "pairing": "original",
+      "n": 516,
+      "mean_distance_s": 6.290860465116278,
+      "mean_changed_fraction": 0.0
+    },
+    {
+      "regime": "F10",
+      "pairing": "near",
+      "n": 516,
+      "mean_distance_s": 5.398238372093024,
+      "mean_changed_fraction": 0.9146317829457364
+    },
+    {
+      "regime": "F10",
+      "pairing": "far",
+      "n": 516,
+      "mean_distance_s": 7.136895348837209,
+      "mean_changed_fraction": 0.9163662790697675
+    }
+  ]
+}
